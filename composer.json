@@ -1,5 +1,5 @@
 {
-    "name": "TedAvery/omnipay-exacttransactions",
+    "name": "tedavery/omnipay-exacttransactions",
     "type": "library",
     "description": "E-xact Transactions gateway for the Omnipay payment processing library",
     "keywords": [
