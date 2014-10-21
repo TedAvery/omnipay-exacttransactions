@@ -1,9 +1,9 @@
 <?php
 
-namespace Omnipay\AuthorizeNet\Message;
+namespace Omnipay\ExactTransactions\Message;
 
 /**
- * Authorize.Net AIM Void Request
+ * E-xact Transactions AIM Void Request
  */
 class AIMVoidRequest extends AbstractRequest
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Omnipay\AuthorizeNet\Message;
+namespace Omnipay\ExactTransactions\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RequestInterface;
 use Omnipay\Common\Message\RedirectResponseInterface;
 
 /**
- * Authorize.Net SIM Authorize Response
+ * E-xact Transactions SIM Authorize Response
  */
 class SIMAuthorizeResponse extends AbstractResponse implements RedirectResponseInterface
 {

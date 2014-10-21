@@ -1,9 +1,9 @@
 <?php
 
-namespace Omnipay\AuthorizeNet\Message;
+namespace Omnipay\ExactTransactions\Message;
 
 /**
- * Authorize.Net SIM Authorize Request
+ * E-xact Transactions SIM Authorize Request
  */
 class SIMAuthorizeRequest extends AbstractRequest
 {

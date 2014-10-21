@@ -1,20 +1,20 @@
 <?php
 
-namespace Omnipay\AuthorizeNet;
+namespace Omnipay\ExactTransactions;
 
-use Omnipay\AuthorizeNet\Message\AIMAuthorizeRequest;
-use Omnipay\AuthorizeNet\Message\AIMPurchaseRequest;
-use Omnipay\AuthorizeNet\Message\CaptureRequest;
+use Omnipay\ExactTransactions\Message\AIMAuthorizeRequest;
+use Omnipay\ExactTransactions\Message\AIMPurchaseRequest;
+use Omnipay\ExactTransactions\Message\CaptureRequest;
 use Omnipay\Common\AbstractGateway;
 
 /**
- * Authorize.Net AIM Class
+ * E-xact Transactions AIM Class
  */
 class AIMGateway extends AbstractGateway
 {
     public function getName()
     {
-        return 'Authorize.Net AIM';
+        return 'E-xact Transactions AIM';
     }
 
     public function getDefaultParameters()
@@ -59,21 +59,21 @@ class AIMGateway extends AbstractGateway
 
     public function authorize(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\AuthorizeNet\Message\AIMAuthorizeRequest', $parameters);
+        return $this->createRequest('\Omnipay\ExactTransactions\Message\AIMAuthorizeRequest', $parameters);
     }
 
     public function capture(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\AuthorizeNet\Message\CaptureRequest', $parameters);
+        return $this->createRequest('\Omnipay\ExactTransactions\Message\CaptureRequest', $parameters);
     }
 
     public function purchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\AuthorizeNet\Message\AIMPurchaseRequest', $parameters);
+        return $this->createRequest('\Omnipay\ExactTransactions\Message\AIMPurchaseRequest', $parameters);
     }
 
     public function void(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\AuthorizeNet\Message\AIMVoidRequest', $parameters);
+        return $this->createRequest('\Omnipay\ExactTransactions\Message\AIMVoidRequest', $parameters);
     }
 }

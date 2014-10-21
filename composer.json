@@ -5,7 +5,7 @@
     "keywords": [
         "e-xact",
         "transactions",
-        "authorize.net",
+        "E-xact Transactions",
         "gateway",
         "merchant",
         "omnipay",
@@ -21,7 +21,7 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Omnipay\\AuthorizeNet\\" : "src/" }
+        "psr-4": { "Omnipay\\ExactTransactions\\" : "src/" }
     },
     "require": {
         "omnipay/common": "~2.0"

@@ -1,18 +1,18 @@
 <?php
 
-namespace Omnipay\AuthorizeNet;
+namespace Omnipay\ExactTransactions;
 
-use Omnipay\AuthorizeNet\Message\SIMAuthorizeRequest;
-use Omnipay\AuthorizeNet\Message\SIMCompleteAuthorizeRequest;
+use Omnipay\ExactTransactions\Message\SIMAuthorizeRequest;
+use Omnipay\ExactTransactions\Message\SIMCompleteAuthorizeRequest;
 
 /**
- * Authorize.Net SIM Class
+ * E-xact Transactions SIM Class
  */
 class SIMGateway extends AIMGateway
 {
     public function getName()
     {
-        return 'Authorize.Net SIM';
+        return 'E-xact Transactions SIM';
     }
 
     public function getDefaultParameters()
@@ -35,17 +35,17 @@ class SIMGateway extends AIMGateway
 
     public function authorize(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\AuthorizeNet\Message\SIMAuthorizeRequest', $parameters);
+        return $this->createRequest('\Omnipay\ExactTransactions\Message\SIMAuthorizeRequest', $parameters);
     }
 
     public function completeAuthorize(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\AuthorizeNet\Message\SIMCompleteAuthorizeRequest', $parameters);
+        return $this->createRequest('\Omnipay\ExactTransactions\Message\SIMCompleteAuthorizeRequest', $parameters);
     }
 
     public function purchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\AuthorizeNet\Message\SIMAuthorizeRequest', $parameters);
+        return $this->createRequest('\Omnipay\ExactTransactions\Message\SIMAuthorizeRequest', $parameters);
     }
 
     public function completePurchase(array $parameters = array())

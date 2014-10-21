@@ -1,11 +1,11 @@
 <?php
 
-namespace Omnipay\AuthorizeNet\Message;
+namespace Omnipay\ExactTransactions\Message;
 
 use Omnipay\Common\Exception\InvalidRequestException;
 
 /**
- * Authorize.Net SIM Complete Authorize Request
+ * E-xact Transactions SIM Complete Authorize Request
  */
 class SIMCompleteAuthorizeRequest extends AbstractRequest
 {

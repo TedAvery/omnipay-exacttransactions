@@ -1,9 +1,9 @@
 <?php
 
-namespace Omnipay\AuthorizeNet\Message;
+namespace Omnipay\ExactTransactions\Message;
 
 /**
- * Authorize.Net Capture Request
+ * E-xact Transactions Capture Request
  */
 class CaptureRequest extends AbstractRequest
 {

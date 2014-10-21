@@ -1,9 +1,9 @@
 <?php
 
-namespace Omnipay\AuthorizeNet\Message;
+namespace Omnipay\ExactTransactions\Message;
 
 /**
- * Authorize.Net AIM Purchase Request
+ * E-xact Transactions AIM Purchase Request
  */
 class AIMPurchaseRequest extends AIMAuthorizeRequest
 {

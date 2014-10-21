@@ -1,13 +1,13 @@
 <?php
 
-namespace Omnipay\AuthorizeNet\Message;
+namespace Omnipay\ExactTransactions\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RequestInterface;
 use Omnipay\Common\Exception\InvalidResponseException;
 
 /**
- * Authorize.Net AIM Response
+ * E-xact Transactions AIM Response
  */
 class AIMResponse extends AbstractResponse
 {

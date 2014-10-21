@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\AuthorizeNet;
+namespace Omnipay\ExactTransactions;
 
 use Omnipay\Tests\GatewayTestCase;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Omnipay\AuthorizeNet\Message;
+namespace Omnipay\ExactTransactions\Message;
 
 use Omnipay\Tests\TestCase;
 
