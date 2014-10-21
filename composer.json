@@ -1,10 +1,10 @@
 {
-    "name": "omnipay/authorizenet",
+    "name": "TedAvery/omnipay-exacttransactions",
     "type": "library",
-    "description": "Authorize.Net gateway for the Omnipay payment processing library",
+    "description": "E-xact Transactions gateway for the Omnipay payment processing library",
     "keywords": [
-        "authorize net",
-        "authorize",
+        "e-xact",
+        "transactions",
         "authorize.net",
         "gateway",
         "merchant",
@@ -12,16 +12,12 @@
         "pay",
         "payment"
     ],
-    "homepage": "https://github.com/thephpleague/omnipay-authorizenet",
+    "homepage": "https://github.com/TedAvery/omnipay-exacttransactions",
     "license": "MIT",
     "authors": [
         {
-            "name": "Adrian Macneil",
-            "email": "adrian@adrianmacneil.com"
-        },
-        {
-            "name": "Omnipay Contributors",
-            "homepage": "https://github.com/thephpleague/omnipay-authorizenet/contributors"
+            "name": "Ted Avery",
+            "email": "tedavery@gmail.com"
         }
     ],
     "autoload": {

@@ -1,13 +1,11 @@
-# Omnipay: Authorize.Net
+# Omnipay: E-xact Transactions
 
-**Authorize.Net driver for the Omnipay PHP payment processing library**
-
-[![Build Status](https://travis-ci.org/thephpleague/omnipay-authorizenet.png?branch=master)](https://travis-ci.org/thephpleague/omnipay-authorizenet)
-[![Latest Stable Version](https://poser.pugx.org/omnipay/authorizenet/version.png)](https://packagist.org/packages/omnipay/authorizenet)
-[![Total Downloads](https://poser.pugx.org/omnipay/authorizenet/d/total.png)](https://packagist.org/packages/omnipay/authorizenet)
+**E-xact Transactions driver for the Omnipay PHP payment processing library**
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
-processing library for PHP 5.3+. This package implements Authorize.Net support for Omnipay.
+processing library for PHP 5.3+. This package implements E-xact Transactions support for Omnipay.
+
+Note: This is just a fork of the Authorize.net Omnipay package with the endpoints changed to E-xact Transactions, as it supports the same API.
 
 ## Installation
 
@@ -17,7 +15,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "omnipay/authorizenet": "~2.0"
+        "TedAvery/omnipay-exacttransactions": "~2.0"
     }
 }
 ```
