@@ -5,7 +5,11 @@
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+. This package implements E-xact Transactions support for Omnipay.
 
-Note: This is just a fork of the E-xact Transactions Omnipay package with the endpoints changed to E-xact Transactions, as it supports the same API.
+Note: This is primarily a fork of the Authorize.net Transactions Omnipay package with changes for E-xact Transactions including:
+
+* new endpoints
+* support for taxes
+* checkout line items
 
 ## Installation
 

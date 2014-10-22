@@ -60,6 +60,60 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('hashSecret', $value);
     }
 
+    public function getTax()
+    {
+        $tax = $this->getParameter('tax');
+        if ($tax) {
+            if (!is_float($tax) &&
+                $this->getCurrencyDecimalPlaces() > 0 &&
+                false === strpos((string) $tax, '.')) {
+                throw new InvalidRequestException(
+                    'Please specify tax as a string or float, ' .
+                    'with decimal places (e.g. \'10.00\' to represent $10.00).'
+                );
+            }
+
+            return $this->formatCurrency($tax);
+        }
+    }
+
+    public function setTax($value)
+    {
+        return $this->setParameter('tax', $value);
+    }
+
+    public function getTaxInteger()
+    {
+        return (int) round($this->getTax() * $this->getCurrencyDecimalFactor());
+    }
+
+    public function getSubtotal()
+    {
+        $subtotal = $this->getParameter('subtotal');
+        if ($subtotal) {
+            if (!is_float($subtotal) &&
+                $this->getCurrencyDecimalPlaces() > 0 &&
+                false === strpos((string) $subtotal, '.')) {
+                throw new InvalidRequestException(
+                    'Please specify subtotal as a string or float, ' .
+                    'with decimal places (e.g. \'10.00\' to represent $10.00).'
+                );
+            }
+
+            return $this->formatCurrency($subtotal);
+        }
+    }
+
+    public function setSubtotal($value)
+    {
+        return $this->setParameter('subtotal', $value);
+    }
+
+    public function getSubtotalInteger()
+    {
+        return (int) round($this->getSubtotal() * $this->getCurrencyDecimalFactor());
+    }
+
     protected function getBaseData()
     {
         $data = array();
@@ -79,8 +133,18 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
         $data = array();
         $data['x_amount'] = $this->getAmount();
+        $data['x_tax'] = $this->getTax();
         $data['x_invoice_num'] = $this->getTransactionId();
         $data['x_description'] = $this->getDescription();
+        $data['x_line_item'] = implode('<|>', array(
+          '1',
+          $this->getDescription(),
+          $this->getDescription(),
+          '1',
+          $this->getSubtotal(),
+          'YES',
+          )
+        );
 
         if ($card = $this->getCard()) {
             // customer billing details
