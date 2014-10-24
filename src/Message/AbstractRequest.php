@@ -50,6 +50,16 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('customerId', $value);
     }
 
+    public function getCustomerRef()
+    {
+        return $this->getParameter('customerRef');
+    }
+
+    public function setCustomerRef($value)
+    {
+        return $this->setParameter('customerRef', $value);
+    }
+
     public function getHashSecret()
     {
         return $this->getParameter('hashSecret');
@@ -134,7 +144,10 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $data = array();
         $data['x_amount'] = $this->getAmount();
         $data['x_tax'] = $this->getTax();
-        $data['x_invoice_num'] = $this->getTransactionId();
+        // START LSG SPECIFIC MODIFICATIONS
+        $data['x_po_num'] = $this->getTransactionId();
+        $data['x_invoice_num'] = $this->getCustomerRef();
+        // END LSG SPECIFIC MODIFICATIONS
         $data['x_description'] = $this->getDescription();
         $data['x_line_item'] = implode('<|>', array(
           '1',
