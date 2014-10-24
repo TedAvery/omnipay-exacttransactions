@@ -135,6 +135,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $data['x_amount'] = $this->getAmount();
         $data['x_tax'] = $this->getTax();
         $data['x_invoice_num'] = $this->getTransactionId();
+        $data['x_po_num'] = $this->getTransactionId();
         $data['x_description'] = $this->getDescription();
         $data['x_line_item'] = implode('<|>', array(
           '1',
