@@ -7,5 +7,5 @@ namespace Omnipay\ExactTransactions\Message;
  */
 class SIMPurchaseRequest extends SIMAuthorizeRequest
 {
-    protected $action = 'AUTH_CAPTURE';
+    protected $action = 'PURCHASE_TOKEN';
 }
